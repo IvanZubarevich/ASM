@@ -113,6 +113,7 @@ again:
     mov cl, [enterredNum+1]
     lea si, enterredNum
     add si, 2
+    mov numBuffer, 0
     
     xor ax, ax 
     xor bx, bx

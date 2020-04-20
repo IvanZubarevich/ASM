@@ -417,7 +417,8 @@ printResult proc
     
 startPrintArray:   
     mov ax, [si]     
-    
+    cmp ax, 0
+    je endPrint 
     lea di, enterredNum[2]
     call numberToString
 
@@ -432,6 +433,7 @@ next_Print:
     mov cx, x
     cmp cx, i
     jne startPrintArray 
+endPrint:
 ret
 printResult endp
 

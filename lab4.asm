@@ -1,13 +1,13 @@
 .model small 
 .stack 100h
 .data 
-    platform 	    db 0FEh,44h,0FEh,44h,0FEh,44h,0FEh,44h,0FEh,44h,0FEh,44h,0FEh,44h,0FEh,44h,0FEh,44h,0FEh,44h,0FEh,44h,0FEh,44h,0FEh,44h,0FEh,44h,0FEh,44h,0FEh,44h,0FEh,44h,0FEh,44h
+    platform 	    db 0FEh,33h,0FEh,33h,0FEh,33h,0FEh,33h,0FEh,33h,0FEh,33h,0FEh,33h,0FEh,33h,0FEh,33h,0FEh,33h,0FEh,33h,0FEh,33h,0FEh,33h,0FEh,33h,0FEh,33h,0FEh,33h,0FEh,33h,0FEh,33h
     platformRight   dw ?
     platformLeft    dw ?
     line_title      db 0FEh,66h
     line            dw 0005h
     ball            db 0Fh, 0Ah   
-    size_platform   dw 001Ah                 
+    size_platform   dw 0012h                 
     size_line       dw 00A0h                    
     platformLoc     dw 0F50h              
     ballLoc         dw 0F00h
@@ -171,7 +171,7 @@ logics:
         mov cx, 0004h            
      drawBlock2:                      
         mov word ptr es:[bx], PL     
-        mov word ptr es:[bx+1], 040h       
+        mov word ptr es:[bx+1], 033h       
         add bx, 2                
         dec cx
         cmp cx, 0                 
@@ -222,7 +222,7 @@ logics:
         mov word ptr es:[bx+1],0h
         add [platformLoc],2
         add [platformRight], 2
-        add [platformLeft], 2        
+        add [platformLeft], 2      
         jmp movePlatform
      go_left:                          
         cmp [platformLoc], 0F00h       

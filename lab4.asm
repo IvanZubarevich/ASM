@@ -21,7 +21,7 @@
     points          dw 0000h     ;кол-во набранных очков                           
     max_coints      dw 01F4h     ;максимальное кол-во очков (500)                
     points_str      db 10 dup(?) ;для перевода в строку кол-ва очков           
-    LEN             dw 0         ;длинна строки в score                 
+    LEN             dw 0         ;длина строки в score                 
     score           db ' ',0Fh,'s',0Fh,'c',0Fh,'o',0Fh,'r',0Fh,'e',0Fh,':',0Fh,' ',0Fh ,' ',0h,' ',07h  ,' ',07h
     size_score      dw 0015h 
     
